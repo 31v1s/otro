@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores para mi Amor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff; /* Fondo inicial blanco */
+            transition: background-color 0.5s ease; /* Transición suave del color de fondo del body */
+        }
+        .container {
+            border: 3px solid #FFD3E3; /* Color inicial del borde */
+            padding: 20px;
+            border-radius: 10px;
+            transition: border-color 0.5s ease; /* Transición suave del color del borde */
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            background-color: #ffffff; /* Fondo blanco */
+        }
+        h1 {
+            color: #d63384;
+            margin-bottom: 10px;
+        }
+        .top-text, .bottom-text {
+            margin: 20px 0;
+        }
+        .flowers-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            opacity: 0;
+            animation: fadeInFlowers 2s 1s forwards;
+        }
+        .flower {
+            font-size: 2em;
+            margin: 0 10px;
+            transform: scale(0.5);
+            animation: bounce 2s infinite;
+        }
+        .flower:nth-child(1) { animation-delay: 0s; }
+        .flower:nth-child(2) { animation-delay: 0.2s; }
+        .flower:nth-child(3) { animation-delay: 0.4s; }
+        .flower:nth-child(4) { animation-delay: 0.6s; }
+        .flower:nth-child(5) { animation-delay: 0.8s; }
+        .flower:nth-child(6) { animation-delay: 1s; }
+        .special-flower {
+            font-size: 4em;
+            margin: 20px auto;
+            animation: specialBounce 3s infinite;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        @keyframes fadeInFlowers {
+            to { opacity: 1; }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) scale(0.5); }
+            50% { transform: translateY(-10px) scale(1); }
+        }
+        @keyframes specialBounce {
+            0%, 100% { transform: scale(0.8); }
+            50% { transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-text">
+            <h1>🌷🌸🌼 Para mi Amor 🌼🌸🌷</h1>
+            <p>SAMI</p>
+            <p>Hoy quiero regalarte un jardín de flores virtuales, cada una simbolizando un pedacito del inmenso amor que siento por ti.</p>
+        </div>
+        
+        <div class="special-flower">🌹</div>
+
+        <div class="flowers-container">
+            <div class="flower">🌹</div>
+            <div class="flower">🌻</div>
+            <div class="flower">🌺</div>
+            <div class="flower">🌸</div>
+            <div class="flower">🌼</div>
+            <div class="flower">🌷</div>
+        </div>
+
+        <div class="bottom-text">
+            <p>Con todo mi amor,<br>ELVIS :3</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".container").style.opacity = 1;
+        });
+
+        // Cambiar el color de fondo del body cada 2 segundos
+        setInterval(changeBackgroundColor, 2000);
+
+        function changeBackgroundColor() {
+            // Generar valores aleatorios para los componentes RGB
+            var r = Math.floor(Math.random() * 256); // Valor entre 0 y 255 para el componente rojo
+            var g = Math.floor(Math.random() * 256); // Valor entre 0 y 255 para el componente verde
+            var b = Math.floor(Math.random() * 256); // Valor entre 0 y 255 para el componente azul
+            // Aplicar el nuevo color de fondo al body con una transición suave
+            document.body.style.transition = "background-color 1s ease";
+            document.body.style.backgroundColor = "rgb(" + r + ", " + g + ", " + b + ")";
+        }
+    </script>
+</body>
+</html>
